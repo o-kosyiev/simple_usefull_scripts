@@ -1,0 +1,23 @@
+bootstrap.memory_lock: false
+node.ingest: true
+http.cors.enabled : true
+http.cors.allow-origin : "*"
+http.cors.allow-methods : OPTIONS, HEAD, GET, POST, PUT, DELETE
+http.cors.allow-headers : X-Requested-With,X-Auth-Token,Content-Type, Content-Length
+#
+xpack.security.enabled: true
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.security.transport.ssl.keystore.path: elastic-certificates.p12
+xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
+#
+cluster.name: cdpuk-prod
+node.name: node-master
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+repositories.url.allowed_urls: ["https://saeuuksprodcdpuksnap01.blob.core.windows.net/prod-cdpuk-repository"]
+network.host: 0.0.0.0
+http.port: 9200
+network.bind_host: 0.0.0.0
+network.publish_host: 0.0.0.0
+node.master: true
+node.data: true
